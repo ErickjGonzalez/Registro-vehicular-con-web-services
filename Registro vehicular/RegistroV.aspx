@@ -8,26 +8,26 @@
      <style>
         
         body {
-            background-color: papayawhip; /* Color de fondo de la página */
+            background-color: papayawhip;
         }
 
         
 
           .table {
-            background-color: whitesmoke; /* Color de fondo de la tabla */
-            border-collapse: collapse; /* Colapso de bordes */
-            width: 100%; /* Ancho de la tabla */
+            background-color: whitesmoke; 
+            border-collapse: collapse; 
+            width: 100%;
         }
 
         .table th, .table td {
-            border: 1px solid #ddd; /* Borde de las celdas */
-            padding: 8px; /* Espaciado interno de las celdas */
-            text-align: left; /* Alineación del texto a la izquierda */
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
         }
 
         .table th {
-            background-color: white; /* Color de fondo de la fila encabezado */
-            color: white; /* Color del texto en la fila encabezado */
+            background-color: white; 
+            color: white; 
         }
 
         
