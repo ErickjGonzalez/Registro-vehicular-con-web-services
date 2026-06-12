@@ -8,7 +8,6 @@ Public Class Wmaestro
     End Sub
 
     Protected Sub Insertar_Click(sender As Object, e As EventArgs) Handles Insertar.Click
-        ' Obtener los valores de los controles en la página
         Dim nomina As String = txtNomina.Text
         Dim nombre As String = txtNombre.Text
         Dim paterno As String = txtPaterno.Text
@@ -20,18 +19,14 @@ Public Class Wmaestro
         Dim municipio As String = Municipios.SelectedValue
         Dim localidad As String = Localidades.SelectedValue
 
-        ' Llamar al método para insertar el maestro en la base de datos
         GestorDB.InsertarMaestro(nomina, nombre, paterno, materno, rfc, curp, sexo, estado, municipio, localidad)
 
-        ' Limpiar los TextBox después de la inserción
         LimpiarTextBox()
 
-        ' Cargar los maestros en el GridView después de la inserción
         CargarMaestrosEnGridView()
     End Sub
 
     Protected Sub Modificar_Click(sender As Object, e As EventArgs) Handles Modificar.Click
-        ' Obtener los valores de los controles en la página
         Dim nomina As String = txtNomina.Text
         Dim nombre As String = txtNombre.Text
         Dim paterno As String = txtPaterno.Text
@@ -43,31 +38,23 @@ Public Class Wmaestro
         Dim municipio As String = Municipios.SelectedValue
         Dim localidad As String = Localidades.SelectedValue
 
-        ' Llamar al método para modificar el maestro en la base de datos
         GestorDB.ModificarMaestro(nomina, nombre, paterno, materno, rfc, curp, sexo, estado, municipio, localidad)
 
-        ' Limpiar los TextBox después de la modificación
         LimpiarTextBox()
 
-        ' Cargar los maestros en el GridView después de la modificación
         CargarMaestrosEnGridView()
     End Sub
 
     Protected Sub Eliminar_Click(sender As Object, e As EventArgs) Handles Eliminar.Click
-        ' Obtener el valor de la nómina a eliminar
         Dim nomina As String = txtNomina.Text
 
-        ' Llamar al método para eliminar el maestro en la base de datos
         GestorDB.EliminarMaestro(nomina)
 
-        ' Limpiar los TextBox después de la eliminación
         LimpiarTextBox()
 
-        ' Cargar los maestros en el GridView después de la eliminación
         CargarMaestrosEnGridView()
     End Sub
 
-    ' Método para limpiar los TextBox
     Private Sub LimpiarTextBox()
         txtNomina.Text = ""
         txtNombre.Text = ""
@@ -79,7 +66,6 @@ Public Class Wmaestro
     End Sub
 
     Protected Sub GridView1_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridView1.SelectedIndexChanged
-        ' Puedes agregar aquí cualquier lógica adicional cuando se selecciona una fila en el GridView
     End Sub
 
     Protected Sub CargarMaestrosEnGridView()
@@ -89,7 +75,6 @@ Public Class Wmaestro
             GridView1.DataSource = maestros
             GridView1.DataBind()
         Else
-            ' Puedes mostrar un mensaje indicando que no hay maestros para mostrar
         End If
     End Sub
 
