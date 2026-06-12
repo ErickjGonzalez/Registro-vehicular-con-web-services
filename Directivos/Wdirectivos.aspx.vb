@@ -30,19 +30,19 @@ Public Class Wdirectivos
             GridViewDirectivos.DataSource = directivos
             GridViewDirectivos.DataBind()
         Else
-            ' Aquí puedes agregar alguna lógica si no hay directivos para mostrar
+           
         End If
     End Sub
 
     Protected Sub Insertar_Click(sender As Object, e As EventArgs) Handles Insertar.Click
-        ' Obtener los valores de los controles en la página
+        
         Dim nomina As String = txtNomina.Text
         Dim nombre As String = txtNombre.Text
         Dim paterno As String = txtPaterno.Text
         Dim materno As String = txtMaterno.Text
         Dim rfc As String = txtRFC.Text
         Dim curp As String = txtCURP.Text
-        Dim sexo As String = txtSexo.Text ' Si no se usa, puedes eliminar este
+        Dim sexo As String = txtSexo.Text
         Dim estado As String = Estados.SelectedValue
         Dim municipio As String = Municipios.SelectedValue
         Dim localidad As String = Localidades.SelectedValue
@@ -86,11 +86,11 @@ Public Class Wdirectivos
         txtMaterno.Text = ""
         txtRFC.Text = ""
         txtCURP.Text = ""
-        ' txtSexo.Text = "" ' Si no se usa, puedes eliminar este
+      
     End Sub
 
     Protected Sub GridViewDirectivos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles GridViewDirectivos.SelectedIndexChanged
-        ' Puedes agregar aquí cualquier lógica adicional cuando se selecciona una fila en el GridView
+        
     End Sub
 
 End Class
@@ -117,7 +117,7 @@ Public Class GestorDBDirectivos
                             directivo.Materno = reader("Materno").ToString()
                             directivo.RFC = reader("RFC").ToString()
                             directivo.CURP = reader("CURP").ToString()
-                            directivo.Sexo = reader("Sexo").ToString() ' Si no se usa, puedes eliminar este
+                            directivo.Sexo = reader("Sexo").ToString() 
                             directivo.Cve_estado = reader("Cve_estado").ToString()
                             directivo.Cve_municipio = reader("Cve_municipio").ToString()
                             directivo.Cve_localidad = reader("Cve_localidad").ToString()
