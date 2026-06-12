@@ -6,12 +6,11 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
      <style>
-        /* Estilos para el fondo de la página */
+        
         body {
             background-color: papayawhip; /* Color de fondo de la página */
         }
 
-        /* Estilos para el encabezado */
         
 
           .table {
@@ -20,14 +19,12 @@
             width: 100%; /* Ancho de la tabla */
         }
 
-        /* Estilos para las celdas de la tabla */
         .table th, .table td {
             border: 1px solid #ddd; /* Borde de las celdas */
             padding: 8px; /* Espaciado interno de las celdas */
             text-align: left; /* Alineación del texto a la izquierda */
         }
 
-        /* Estilos para la fila encabezado de la tabla */
         .table th {
             background-color: white; /* Color de fondo de la fila encabezado */
             color: white; /* Color del texto en la fila encabezado */
@@ -36,23 +33,23 @@
         
 
     input[type=radio] {
-        background-color: white; /* Cambia el color de fondo de los botones de radio a blanco */
+        background-color: white;
     }
 
     .gridview-header {
-        color: black; /* Cambia el color del texto a negro */
-        font-weight: bold; /* Opcional: establece el texto en negrita */
+        color: black; 
+        font-weight: bold;
     }
 
     .table th {
-        color: black; /* Cambia el color de texto de las columnas a negro */
+        color: black;
     }
     .label-text {
         background-color: black;
         color: white;
-        padding: 5px 10px; /* Ajusta el padding según sea necesario */
-        border-radius: 5px; /* Añade bordes redondeados */
-        display: inline-block; /* Para que el fondo negro se ajuste al texto */
+        padding: 5px 10px;
+        border-radius: 5px;
+        display: inline-block; 
     }
 
     </style>
